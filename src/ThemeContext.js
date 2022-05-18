@@ -7,8 +7,6 @@ const initialValues = {
 export const Theme = createContext(initialValues);
 
 export const ThemeContext = ({ children }) => {
-  const [theme, setTheme] = useState(false);
-  return (
-    <Theme.Provider value={{ theme, setTheme }}>{children}</Theme.Provider>
-  );
+  const [dark, setTheme] = useState(false);
+  return <Theme.Provider value={{ dark, setTheme }}>{children}</Theme.Provider>;
 };
